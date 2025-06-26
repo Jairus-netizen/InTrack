@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend', sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f5f7fa;
+}
+
+.container {
+    max-width: 140rem;
+    width: 100%;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 1rem;
+    padding: 30px;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    color: #2c3e50;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.user-info h4, .user-info span {
+    font-weight: 700;
+    font-size: 20px;
+    color: #2c3e50;
+}
+
+
+/* Notification Bell */
+.notification-bell {
+    position: relative;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.notification-bell i {
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.notification-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: white;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 100;
+    padding: 10px 0;
+}
+
+.notification-bell:hover .notification-dropdown {
+    display: block;
+}
+
+.notification-item {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.notification-item:hover {
+    background: #f5f7fa;
+}
+
+.notification-item h4 {
+    font-size: 0.9rem;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.notification-item p {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    margin-bottom: 5px;
+}
+
+.notification-item small {
+    font-size: 0.7rem;
+    color: #95a5a6;
+}
+
+.view-all {
+    display: block;
+    text-align: center;
+    padding: 8px;
+    color: #1b5886;
+    font-weight: 500;
+}
+
+/* PROJECT CONTENT*/
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #2c3e50;
+    padding: 10px 0;
+}
+
+.content-header h2{
+    margin-left: 10px;
+    color: #2c3e50;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.add-icon{
+    font-size: 1.3rem;
+    color: #2c3e50;
+}
+
+.add-project {
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.3s;
+    margin: 40px 20px;
+}
+
+.add-project:hover {
+    background-color: #92dbff;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project-cards-container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(min-content, 300px));
+    grid-gap: 20px;
+}
+
+.project-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #e9e9e9;
+    border-radius: 20px;
+    width: 300px;
+    height: 400px;
+}
+
+.project-img img{
+    object-fit: cover;
+    width: 100%;
+    max-height: 250px;
+    border-radius: 20px 20px 0 0;
+}
+
+.project-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.project-body h1 {
+    font-size: 25px;
+}
+
+.view-project {
+    margin-top: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6c757d;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: all 0.3s;
+} 
+
+.view-project:hover {
+    color: white;
+    background-color: #4285F4;
+    transform: scale(1.05);
+}
+
+

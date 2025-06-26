@@ -1,0 +1,644 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend', sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f5f7fa;
+}
+
+.container {
+    max-width: 140rem;
+    width: 100%;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 1rem;
+    padding: 30px;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    color: #2c3e50;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.user-info h4, .user-info span {
+    font-weight: 700;
+    font-size: 20px;
+    color: #2c3e50;
+}
+
+
+/* Notification Bell */
+.notification-bell {
+    position: relative;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.notification-bell i {
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.notification-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: white;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 100;
+    padding: 10px 0;
+}
+
+.notification-bell:hover .notification-dropdown {
+    display: block;
+}
+
+.notification-item {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.notification-item:hover {
+    background: #f5f7fa;
+}
+
+.notification-item h4 {
+    font-size: 0.9rem;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.notification-item p {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    margin-bottom: 5px;
+}
+
+.notification-item small {
+    font-size: 0.7rem;
+    color: #95a5a6;
+}
+
+.view-all {
+    display: block;
+    text-align: center;
+    padding: 8px;
+    color: #1b5886;
+    font-weight: 500;
+}
+
+/* VIEW PROJECT CONTENT*/
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.view-project-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.view-project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.view-project-header h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+}
+
+.project-status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.project-status.in-progress {
+    background: #fff3e0;
+    color: #ff9800;
+}
+
+.project-status.approved {
+    background: #e6f7ee;
+    color: #00a651;
+}
+
+.project-status.rejected {
+    background: #ffebee;
+    color: #f44336;
+}
+
+.view-project-body {
+    margin-bottom: 20px;
+}
+
+.view-project-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.view-project-group {
+    flex: 1;
+    min-width: 250px;
+}
+
+.view-project-group img {
+    max-width: 350px;
+    max-height: 350px;
+}
+
+.view-project-group h3 {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.view-project-group-bottom {
+    margin-top: 2rem;
+}
+
+.view-project-group-bottom h3 {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.view-project-item {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.view-project-label {
+    font-weight: 600;
+    color: #555;
+    width: 200px;
+    margin-right: 40px;
+}
+
+.view-project-value {
+    color: #333;
+    padding-left: 5px;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+/* Enhanced text styling with more specific selectors */
+.view-project-text {
+    color: #444;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.view-project-text p,
+.view-project-card p {
+    margin: 0 0 15px 0 !important;
+    padding: 0 !important;
+    color: inherit;
+    line-height: inherit;
+    font-size: 1rem;
+}
+
+.view-project-text p:last-child,
+.view-project-card p:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* List styling with more specificity */
+.view-project-list {
+    padding-left: 20px;
+    margin: 10px 0 15px 0;
+    color: #444;
+    line-height: 1.6;
+}
+
+.view-project-list li {
+    margin-bottom: 8px;
+    color: inherit;
+    line-height: inherit;
+    font-size: 1rem;
+}
+
+.view-project-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* Footer actions */
+.view-project-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    margin-top: 20px;
+}
+
+.project-back-btn {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #555;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.95rem;
+}
+
+.project-back-btn:hover {
+    background: #e0e0e0;
+}
+
+.project-back-btn i {
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+.project-action-btns {
+    display: flex;
+    gap: 15px;
+}
+
+.project-reject-btn {
+    padding: 12px 30px;
+    background: #ffebee;
+    border: none;
+    border-radius: 5px;
+    color: #f44336;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.95rem;
+}
+
+.project-reject-btn:hover {
+    background: #ffcdd2;
+}
+
+.project-approve-btn {
+    padding: 12px 30px;
+    background: #e6f7ee;
+    border: none;
+    border-radius: 5px;
+    color: #00a651;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.95rem;
+}
+
+.project-approve-btn:hover {
+    background: #c8e6c9;
+}
+
+
+/* Lightbox Styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto;
+    animation: fadeIn 0.3s;
+}
+
+.lightbox-content {
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: #ccc;
+}
+
+.lightbox-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Input and Textarea Styles */
+.view-project-input {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 1rem;
+    color: #333;
+    background: #fff;
+    width: 100%;
+    max-width: 300px;
+    transition: border-color 0.3s;
+}
+
+.view-project-input:read-only {
+    background: #f5f5f5;
+    border-color: #eee;
+    cursor: not-allowed;
+}
+
+.view-project-input:focus {
+    outline: none;
+    border-color: #1b5886;
+    box-shadow: 0 0 0 2px rgba(27, 88, 134, 0.1);
+}
+
+.view-project-textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    resize: vertical;
+    transition: border-color 0.3s;
+}
+
+.view-project-textarea:focus {
+    outline: none;
+    border-color: #1b5886;
+    box-shadow: 0 0 0 2px rgba(27, 88, 134, 0.1);
+}
+
+/* Edit Button Styles */
+.project-edit-btn {
+    padding: 12px 30px;
+    background: #1b5886;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.project-edit-btn:hover {
+    background: #14426b;
+}
+
+.project-save-btn {
+    padding: 12px 30px;
+    background: #00a651;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.project-save-btn:hover {
+    background: #008a45;
+}
+
+.project-cancel-btn {
+    padding: 12px 30px;
+    background: #f44336;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.project-cancel-btn:hover {
+    background: #d32f2f;
+}
+
+.edit-image-btn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: none;
+}
+
+.edit-image-btn:hover {
+    background: #e0e0e0;
+}
+
+.editing .edit-image-btn {
+    display: inline-block;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Complete Project Button */
+.project-complete-btn {
+    padding: 12px 30px;
+    background: #00a651;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-right: 15px;
+}
+
+.project-complete-btn:hover {
+    background: #008a45;
+}
+
+.project-completed-message {
+    padding: 12px 30px;
+    background: #e6f7ee;
+    border-radius: 5px;
+    color: #00a651;
+    font-weight: 600;
+}
+
+/* Status Styles */
+.project-status.completed {
+    background: #e6f7ee;
+    color: #00a651;
+}
+
+.project-status.in-progress {
+    background: #fff3e0;
+    color: #ff9800;
+}
+
+.project-status.over-due {
+    background: #ffebee;
+    color: #f44336;
+}
+
+/* Alert Messages */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.alert-success {
+    background-color: #e6f7ee;
+    color: #00a651;
+    border: 1px solid #c8e6c9;
+}
+
+.alert-error {
+    background-color: #ffebee;
+    color: #f44336;
+    border: 1px solid #ffcdd2;
+}
+
+.view-project-card.editing .view-project-input:not([type="date"]),
+.view-project-card.editing .view-project-textarea {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.view-project-card.editing .view-project-input[type="date"] {
+    padding: 7px;
+}
+
+.view-project-card.editing .view-project-textarea {
+    min-height: 150px;
+}
+
+.project-save-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Add these styles to your existing CSS */
+.project-status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.project-status.in-progress {
+    background-color: #339af0;
+    color: white;
+}
+
+.project-status.over-due {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.project-status.completed {
+    background-color: #51cf66;
+    color: white;
+}
+
+.project-completed-message {
+    color: #51cf66;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background-color: #ebfbee;
+}
+
+.project-complete-btn {
+    background-color: #00a651;
+    color: white;
+}
+
+.project-complete-btn:hover {
+    background-color: #008f46;
+}
