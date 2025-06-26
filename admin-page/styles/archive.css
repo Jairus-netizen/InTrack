@@ -1,0 +1,244 @@
+/* ARCHIVE PAGE STYLES */
+.archive-page-container {
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+}
+
+.archive-tools-wrapper {
+    margin-bottom: 20px;
+}
+
+.archive-search-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.archive-filter-group {
+    display: flex;
+    gap: 10px;
+}
+
+.archive-filter-group select {
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    font-family: var(--font-family);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.archive-filter-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Archive-specific search form */
+.archive-search-form {
+    display: flex;
+    align-items: center;
+}
+
+.archive-filter-group form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: unset;
+    margin: 0;
+}
+
+.archive-search-form {
+    position: unset;
+    margin: 0;
+}
+
+
+
+.archive-form-input {
+    display: flex;
+    align-items: center;
+    background: #f5f5f5;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    margin-left: 8rem;
+}
+
+.archive-form-input input {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    background: transparent;
+    width: 250px;
+}
+
+.archive-search-btn {
+    border: none;
+    background: var(--primary-color);
+    padding: 10px 15px;
+    cursor: pointer;
+    color: white !important;
+    border-radius: 0 25px 25px 0;
+    transition: var(--transition);
+}
+
+.archive-search-btn:hover {
+    background: #3367d6;
+}
+
+/* TABLE DATA STYLES */
+.archive-table-data {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.archive-table-data .archive-table-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.archive-table-data .archive-table-head h3 {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.archive-table-data .archive-table-head span {
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Archive table styles */
+.archive-table-responsive {
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+.archive-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.archive-table thead td {
+    font-weight: 600;
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    background-color: var(--primary-color);
+    min-width: 120px;
+    color: white;
+}
+
+.archive-table tbody tr {
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s ease;
+}
+
+.archive-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.archive-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.archive-table tbody td {
+    padding: 12px 10px;
+    vertical-align: middle;
+}
+
+.archive-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.archive-actions a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: #555;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.archive-actions a:hover {
+    transform: scale(1.1);
+}
+
+.archive-retrieve-btn:hover {
+    background-color: rgba(0, 166, 81, 0.1);
+    color: #00a651;
+}
+
+.archive-delete-btn:hover {
+    background-color: rgba(244, 67, 54, 0.1);
+    color: #f44336;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .archive-search-filter {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .archive-filter-group {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .archive-table-data .archive-table-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .archive-table thead {
+        display: none;
+    }
+    
+    .archive-table tbody tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    
+    .archive-table tbody td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .archive-table tbody td:last-child {
+        border-bottom: none;
+    }
+    
+    .archive-table tbody td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        margin-right: 15px;
+    }
+    
+    .archive-actions {
+        justify-content: flex-end;
+    }
+}

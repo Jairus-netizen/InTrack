@@ -1,0 +1,282 @@
+.project-monitor-page-container {
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.project-monitor-tools-wrapper {
+    margin-bottom: 20px;
+}
+
+.project-monitor-search-filter {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.project-monitor-filter-group {
+    display: flex;
+    gap: 10px;
+}
+
+.project-monitor-filter-group form{
+    display: flex;
+    align-items: center;
+    position: unset;
+    margin: 0;
+}
+
+.project-monitor-filter-group select {
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    font-family: var(--font-family);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.project-monitor-filter-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.project-monitor-search-form {
+    display: flex;
+    align-items: center;
+}
+
+.project-monitor-search-form form {
+    display: flex;
+    align-items: center;
+    position: unset;
+    margin: 0;
+}
+
+.project-monitor-form-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #f5f5f5;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.project-monitor-form-input input {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    background: transparent;
+    width: 250px;
+    padding-right: 45px; /* Make space for the button */
+}
+
+.project-monitor-search-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 40px;
+    border: none;
+    background: var(--primary-color);
+    cursor: pointer;
+    color: white;
+    border-radius: 0 25px 25px 0;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-monitor-search-btn:hover {
+    background: #3367d6;
+}
+
+.project-monitor-search-btn i {
+    font-size: 1.2rem;
+    transition: transform 0.2s ease;
+}
+
+/* Clear button state (when input has text) */
+.project-monitor-form-input:has(input:not(:placeholder-shown)) .project-monitor-search-btn {
+    background: #f44336; /* Red color for clear button */
+}
+
+.project-monitor-form-input:has(input:not(:placeholder-shown)) .project-monitor-search-btn:hover {
+    background: #d32f2f; /* Darker red on hover */
+}
+
+.project-monitor-table-data {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.project-monitor-table-data .project-monitor-table-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.project-monitor-table-data .project-monitor-table-head span {
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.project-monitor-table-responsive {
+    overflow-x: auto;
+}
+
+.project-monitor-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.project-monitor-table thead td {
+    font-weight: 600;
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    background-color: var(--primary-color);
+    min-width: 120px;
+    color: white;
+}
+
+.project-monitor-table tbody tr {
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s ease;
+}
+
+.project-monitor-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.project-monitor-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.project-monitor-table tbody td {
+    padding: 12px 10px;
+    vertical-align: middle;
+}
+.project-monitor-stat {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-block;
+    text-align: center;
+    min-width: 80px;
+}
+
+.project-monitor-stat.on-hold {
+    background: #fff3e0;
+    color: #ff9800;
+}
+
+.project-monitor-stat.ongoing {
+    background: #ffebee;
+    color: #f44336;
+}
+
+.project-monitor-stat.dropped {
+    background: #00a651;
+    color: white;
+}
+
+.project-monitor-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.project-monitor-actions a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: #555;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.project-monitor-actions a:hover {
+    transform: scale(1.1);
+}
+
+.project-monitor-view-btn:hover {
+    background-color: rgba(66, 133, 244, 0.1);
+    color: var(--primary-color);
+}
+
+.project-monitor-archive-btn:hover {
+    background-color: rgba(159, 168, 218, 0.1);
+    color: #5c6bc0;
+}
+
+@media (max-width: 768px) {
+    .project-monitor-search-filter {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .project-monitor-filter-group {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .project-monitor-form-input input {
+        width: 100%;
+    }
+
+    .project-monitor-table thead {
+        display: none;
+    }
+
+    .project-monitor-table tbody tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .project-monitor-table tbody td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .project-monitor-table tbody td:last-child {
+        border-bottom: none;
+    }
+
+    .project-monitor-table tbody td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        margin-right: 15px;
+    }
+    .project-monitor-table tbody td[data-label="Status"] {
+        justify-content: flex-start;
+    }
+    
+    .project-monitor-status {
+        min-width: 70px;
+        padding: 4px 8px;
+    }
+    .project-monitor-actions {
+        justify-content: flex-end;
+    }
+}
